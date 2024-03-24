@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Länk till ikonen för webbläsarfliken -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png" />
+    <!-- Länk till Bootstraps CSS-fil -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Länk till Bootstraps ikoner -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css" />
+    <title>Bootstrap</title>
+  </head>
+  <body>
+    <header>
+      <!-- Navigationsfält med mörk bakgrundsfärg, responsiv design och en liten skuggning -->
+      <nav class="navbar navbar-dark navbar-expand-lg bg-dark shadow-sm">
+        <!-- Behållare som sträcker sig över hela bredden på skärmen -->
+        <div class="container-fluid">
+          <!-- Knapp för att kollapsa navigationslänkarna på mindre skärmar -->
+          <button
+            class="navbar-toggler mobile-nav-toggle"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar">
+            <!-- Hamburger-menyn som blir navigationslänkarna kollapsat -->
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- En grupp för att centrera alla navigationslänkarna -->
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="collapsibleNavbar">
+            <div class="justify-content-center text-uppercase">
+              <!-- Navigationslänkarna som med "nav-underline" kommer få ett streck under sig vid hovring -->
+
+              <ul class="navbar-nav nav-underline">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    aria-expanded="false"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true">
+                    Shop
+                  </a>
+                  <ul class="dropdown-menu" data-bs-popper="none">
+                    <li>
+                      <a class="dropdown-item" href="posters.html">Posters</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="canvas.html">Canvas</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item text-danger" href="outlet.html"
+                        >Outlet</a
+                      >
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item fw-semibold"
+                        href="bestsellers.html"
+                        >Bestsellers</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="portfolio.html"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Grupp med knappar på höger sida av navigationsfältet och som har padding i slutet (padding-end) -->
+          <div class="btn-group pe-3">
+            <!-- Knapp som öppnar inloggningsmodalen -->
+            <button
+              type="button"
+              class="btn btn-light align-items-stretch text-uppercase"
+              data-bs-toggle="modal"
+              data-bs-target="#logInModal">
+              Log In
+            </button>
+            <!-- Knapp som man kan klicka på om man vill ändra color-mode -->
+            <button
+              type="button"
+              id="themeButton"
+              class="btn rounded-end mx-auto btn-outline-light"
+              data-bs-toggle="theme"
+              data-bs-target="html"
+              aria-label="Toggle theme">
+              <span id="themeIcon" class="bi bi-sun-fill"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <!-- Öppnas vid klick på "Log in"-knapp, modalfönstret fadear in -->
+      <div class="modal fade" id="logInModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div
+            class="modal-content card bg-light text-black"
+            style="border-radius: 1rem">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body container">
+              <div
+                class="row d-flex justify-content-center align-items-center text-center p-5">
+                <h2 class="fw-bold mb-2 text-uppercase">Log In</h2>
+                <p class="text-black-50 mb-4">
+                  Please enter your login and password.
+                </p>
+
+                <div class="mb-4">
+                  <input
+                    type="email"
+                    id="typeEmailX"
+                    class="form-control"
+                    placeholder="E-mail" />
+                </div>
+                <!--  -->
+                <div class="mb-2">
+                  <input
+                    type="password"
+                    id="typePasswordX"
+                    class="form-control"
+                    placeholder="Password" />
+                </div>
+
+                <p class="small mb-4 pb-2">
+                  <a class="text-black-50" href="#!">Forgot password?</a>
+                </p>
+                <!-- Logga in-knapp -->
+                <button class="btn btn-dark px-5" type="submit">Log In</button>
+                <!--  -->
+                <div
+                  class="col d-flex justify-content-center text-center mt-5 pt-1">
+                  <!-- Svarta Bootstrap-ikoner -->
+                  <a href="#!" class="text-black">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                  <a href="#!" class="text-black">
+                    <i class="bi bi-twitter-x m-4"></i>
+                  </a>
+                  <a href="#!" class="text-black">
+                    <i class="bi bi-google"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col mt-2 text-center small">
+                <p class="mb-0">
+                  Don't have an account?
+                  <a href="#!" class="text-black-50 fw-bold">Sign Up</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Layout som är flexibel och som sträcker sig över hela sidan med margin 5-->
+    <div class="row m-5">
+      <!-- Kolumn för bilder -->
+      <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+        <img
+          src="images/cypern2.jpg"
+          class="w-100 shadow-sm rounded mb-4"
+          alt="Bild" />
+
+        <img
+          src="images/flowers.jpg"
+          class="w-100 shadow-1-strong rounded mb-4"
+          alt="Bild" />
+      </div>
+
+      <!-- Kolumn för bilder -->
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <img
+          src="images/autumn.jpg"
+          class="w-100 shadow-1-strong rounded mb-4"
+          alt="Bild" />
+
+        <img
+          src="images/cypern.jpg"
+          class="w-100 shadow-1-strong rounded mb-4"
+          alt="Bild" />
+      </div>
+
+      <!-- Kolumn för bilder -->
+      <div class="col-lg-4 mb-4 mb-lg-1">
+        <img
+          src="images/turtle.jpg"
+          class="w-100 shadow-1-strong rounded mb-4"
+          alt="Bild" />
+
+        <img
+          src="images/flowerraindrops.jpg"
+          class="w-100 shadow-1-strong rounded mb-4"
+          alt="Bild" />
+      </div>
+      <!-- Kolumn för bilder -->
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <img
+          src="images/baby-bw.jpg"
+          class="w-100 shadow-1-strong rounded mb-4"
+          alt="Bild" />
+
+        <img
+          src="images/cave2.jpg"
+          class="w-100 shadow-1-strong rounded mb-4"
+          alt="Bild" />
+      </div>
+    </div>
+
+    <!-- Footer-elementet med marginal-top (mt-5), padding (p-4), 
+    textjustering till mitten (text-center), vit textfärg (text-white), 
+    mörk bakgrundsfärg (bg-dark), och lätt vikt typsnitt (fw-light).-->
+    <footer class="mt-5 p-4 text-center text-white bg-dark fw-light">
+      <!-- En behållare med flytande bredd och generell fyllning (padding) om 3 enheter runt om. 
+      Detta används för att skapa en flexibel layout inom hela webbsidans bredd.-->
+      <div class="container-fluid p-3">
+        <!-- Sociala medier-sektion med marginal 4 enheter nertill (mb-4).
+          Innehåller länkar eller knappar till olika sociala medieplattformar, 
+          var och en representerad av dess ikon från Bootstrap Icons.-->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a
+            class="btn rounded-pill shadow-sm m-1 btn-light"
+            href="#!"
+            role="button">
+            <i class="bi bi-facebook"></i>
+          </a>
+
+          <!-- Twitter/X -->
+          <a
+            class="btn rounded-pill shadow-sm m-1 btn-light"
+            href="#!"
+            role="button">
+            <i class="bi bi-twitter-x"> </i>
+          </a>
+
+          <!-- Pinterest -->
+          <a
+            class="btn rounded-pill shadow-sm m-1 btn-light"
+            href="#!"
+            role="button">
+            <i class="bi bi-pinterest"> </i>
+          </a>
+
+          <!-- Instagram -->
+          <a
+            class="btn rounded-pill shadow-sm m-1 btn-light"
+            href="#!"
+            role="button">
+            <i class="bi bi-instagram"></i>
+          </a>
+
+          <!-- Github -->
+          <a
+            class="btn rounded-pill shadow-sm m-1 btn-light"
+            href="#!"
+            role="button">
+            <i class="bi bi-github"></i>
+          </a>
+        </section>
+        <!-- Horisontell linje med opacitet på 50% -->
+        <hr class="hr border opacity-50" />
+
+        <div class="row mb-3 text-center">
+          <div class="col-6 col-sm-4">
+            <h6 class="text-uppercase fw-bold mb-4">Links</h6>
+            <ul class="list-unstyled">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Kontaktinformation -->
+          <div class="col-6 col-sm-4">
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p>Havregatan 6</p>
+            <p>603 72 Norrkoping, Sweden</p>
+            <p>
+              <a href="mailto:victoriafingal@hotmail.se" class="link-primary">
+                victoriafingal@hotmail.se
+              </a>
+            </p>
+            <p>(+46) 123-45 67 89</p>
+          </div>
+          <div class="col-6 col-md-4">
+            <h6 class="text-uppercase fw-bold mb-4">Links</h6>
+            <ul class="list-unstyled">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Knapp för att scrolla upp -->
+        <div class="col-md-1 position-relative">
+          <a
+            href="index.html"
+            class="btn btn-lg position-fixed bottom-0 end-5 mb-3 me-3"
+            style="background-color: #dedede"
+            role="button">
+            <i class="bi bi-chevron-up"></i>
+          </a>
+        </div>
+        <!-- Copyright-information -->
+        <div class="text-center small">
+          <p>&copy; 2024 Fingally. Just a fingalastic website.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript-filer -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

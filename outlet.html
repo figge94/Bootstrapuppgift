@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Länk till ikonen för webbläsarfliken -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png" />
+    <!-- Länk till Bootstraps CSS-fil -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Länk till Bootstraps ikoner -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css" />
+    <title>Bootstrap</title>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg bg-dark shadow-sm"
+        data-bs-theme="dark">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler mobile-nav-toggle"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="collapsibleNavbar">
+            <div class="justify-content-center text-uppercase">
+              <ul class="navbar-nav nav-underline">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle active"
+                    aria-current="page"
+                    href="shop.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Shop
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="posters.html">Posters</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="canvas.html">Canvas</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item active" href="outlet.html"
+                        >Outlet</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a
+                        class="dropdown-item fw-semibold"
+                        href="bestsellers.html"
+                        >Bestsellers</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- För att lägga knapparna i navbar på höger sida -->
+          <div class="btn-group pe-3">
+            <!-- Logga in-knapp -->
+            <button
+              type="button"
+              class="btn btn-light align-items-stretch text-uppercase"
+              data-bs-toggle="modal"
+              data-bs-target="#logInModal">
+              Log In
+            </button>
+            <button
+              type="button"
+              id="themeButton"
+              class="btn rounded-end mx-auto btn-outline-light"
+              data-bs-toggle="theme"
+              data-bs-target="html"
+              aria-label="Toggle theme">
+              <span id="themeIcon" class="bi bi-sun-fill"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div
+        class="jumbotron bg-danger-subtle text-center text-uppercase m-5 p-5">
+        <p class="lead">Skapa din egna poster</p>
+      </div>
+      <div class="m-5">
+        <div class="input-group mb-3">
+          <input class="form-control" type="text" placeholder="Search" />
+          <button class="btn btn-dark" type="button">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Titel -->
+      <h1 class="text-uppercase text-center text-danger m-5">Outlet</h1>
+      <div class="row row-cols-2 row-cols-md-4 g-4 m-5">
+        <div class="col">
+          <div class="card h-100 bg-light border-dark shadow-sm border-0">
+            <img
+              src="images/radhusetnorrkoping.jpg"
+              class="card-img-top"
+              alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Norrköping view</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  View
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Edit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 bg-light border-dark shadow-sm border-0">
+            <img src="images/redfirework.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Fireworks</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 bg-light border-dark shadow-sm border-0">
+            <img src="images/turtle.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Turtle</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 bg-light border-dark shadow-sm border-0">
+            <img src="images/fog.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Fog</h5>
+              <ol class="list-unstyled mb-0 small">
+                <li class="mb-3">
+                  <i class="bi bi-check text-success me-3"></i>Unlimited updates
+                </li>
+                <li class="mb-3">
+                  <i class="bi bi-check text-success me-3"></i>Git repository
+                </li>
+                <li class="mb-3">
+                  <i class="bi bi-check text-success me-3"></i>npm installation
+                </li>
+              </ol>
+              <p class="mb-4 text-center fw-bold">$499</p>
+              <div class="text-center">
+                <button type="button" class="btn btn-sm btn-dark">
+                  Add to cart
+                </button>
+                <button
+                  id="heartButton"
+                  class="btn heart-button border-0"
+                  onclick="toggleHeart()">
+                  <i id="heartIcon" class="bi-suit-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div
+            class="modal-content card bg-danger-subtle text-black"
+            style="border-radius: 1rem">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body container">
+              <div
+                class="row d-flex justify-content-center align-items-center text-center p-5">
+                <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                <p class="text-black-50 mb-4">
+                  Please enter your login and password.
+                </p>
+
+                <div class="form-outline form-black mb-4">
+                  <input
+                    type="email"
+                    id="typeEmailX"
+                    class="form-control form-control-lg" />
+                  <label class="form-label" for="typeEmailX">Email</label>
+                </div>
+
+                <div class="form-outline form-black mb-2">
+                  <input
+                    type="password"
+                    id="typePasswordX"
+                    class="form-control form-control-lg" />
+                  <label class="form-label" for="typePasswordX">Password</label>
+                </div>
+
+                <p class="small mb-4 pb-lg-2">
+                  <a class="text-black-50" href="#!">Forgot password?</a>
+                </p>
+
+                <button class="btn btn-outline-dark btn-lg px-5" type="submit">
+                  Login
+                </button>
+
+                <div
+                  class="col d-flex justify-content-center text-center mt-4 pt-1">
+                  <a href="#!" class="text-black">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                  <a href="#!" class="text-black">
+                    <i class="bi bi-twitter-x m-4"></i>
+                  </a>
+                  <a href="#!" class="text-black">
+                    <i class="bi bi-google"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col mt-2 text-center small">
+                <p class="mb-0">
+                  Don't have an account?
+                  <a href="#!" class="text-black-50 fw-bold">Sign Up</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="mt-5 p-4 text-center text-white bg-dark fw-light">
+      <!-- En behållare med flytande bredd och generell fyllning (padding) om 3 enheter runt om. 
+      Detta används för att skapa en flexibel layout inom hela webbsidans bredd.-->
+      <div class="container-fluid p-3">
+        <!-- Sociala medier-sektion med marginal 4 enheter nertill (mb-4).
+          Innehåller länkar eller knappar till olika sociala medieplattformar, 
+          var och en representerad av dess ikon från Bootstrap Icons.-->
+
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a
+            class="btn rounded-pill shadow-sm m-1 btn-light"
+            href="#!"
+            role="button">
+            <i class="bi bi-facebook"></i>
+          </a>
+
+          <!-- Twitter/X -->
+          <a
+            class="btn rounded-pill shadow-sm m-1 btn-light"
+            href="#!"
+            role="button">
+            <i class="bi bi-twitter-x"> </i>
+          </a>
+
+          <!-- Pinterest -->
+          <a
+            class="btn rounded-pill shadow-sm m-1 btn-light"
+            href="#!"
+            role="button">
+            <i class="bi bi-pinterest"> </i>
+          </a>
+
+          <!-- Instagram -->
+          <a
+            class="btn rounded-pill shadow-sm m-1 btn-light"
+            href="#!"
+            role="button">
+            <i class="bi bi-instagram"></i>
+          </a>
+
+          <!-- Github -->
+          <a
+            class="btn rounded-pill shadow-sm m-1 btn-light"
+            href="#!"
+            role="button">
+            <i class="bi bi-github"></i>
+          </a>
+        </section>
+
+        <hr class="hr border opacity-50" />
+
+        <div class="row mb-3 text-center">
+          <div class="col-6 col-sm-4">
+            <h6 class="text-uppercase fw-bold mb-4">Links</h6>
+            <ul class="list-unstyled">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-sm-4">
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p>Havregatan 6</p>
+            <p>603 72 Norrkoping, Sweden</p>
+            <p>
+              <a href="mailto:victoriafingal@hotmail.se" class="link-primary">
+                victoriafingal@hotmail.se
+              </a>
+            </p>
+            <p>(+46) 123-45 67 89</p>
+          </div>
+          <div class="col-6 col-md-4">
+            <h6 class="text-uppercase fw-bold mb-4">Links</h6>
+            <ul class="list-unstyled">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-1 position-relative">
+          <a
+            href="#"
+            class="btn btn-lg position-fixed bottom-0 end-5 mb-3 me-3 back-to-top"
+            style="background-color: #dedede"
+            role="button">
+            <i class="bi bi-chevron-up"></i>
+          </a>
+        </div>
+        <div class="text-center small">
+          <p>&copy; 2024 Fingally. Just a fingalastic website.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
