@@ -1,0 +1,77 @@
+.hero {
+  padding: 100px 25px;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(201, 161, 249, 0.8),
+    rgb(95, 51, 171) 80%
+  );
+}
+
+.hero-logo {
+  width: 30rem;
+  max-width: 100%;
+}
+
+.modal-content {
+  border-radius: 1rem;
+}
+
+.modal-content-custom {
+  border-radius: 1rem;
+}
+
+.back-to-top {
+  background-color: #dedede;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.custom-card-1 {
+  background: linear-gradient(
+    130deg,
+    rgba(79, 86, 201, 0.8),
+    rgba(209, 196, 250, 0.5) 60%
+  );
+}
+
+.custom-card-2 {
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(79, 86, 201, 0.6),
+    rgba(209, 196, 250, 0.5) 60%
+  );
+}
+
+.custom-card-3 {
+  background: linear-gradient(
+    130deg,
+    rgba(209, 196, 250, 0.8),
+    rgba(79, 86, 201, 0.5) 60%
+  );
+}
+
+.profile-avatar {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 38px;
+  padding: 0;
+}
+
+#themeIcon {
+  line-height: 1;
+  font-size: 1rem;
+}

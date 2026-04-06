@@ -11864,4 +11864,16 @@ textarea.form-control-lg {
   background: linear-gradient(130deg, rgba(209, 196, 250, 0.8), rgba(79, 86, 201, 0.5));
 }
 
+.modal-content-custom {
+  border-radius: 1rem;
+}
+
+.back-to-top {
+  background-color: #dedede;
+}
+
+.poster-image-fit {
+  height: fit-content;
+}
+
 /*# sourceMappingURL=style.css.map */
