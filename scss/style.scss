@@ -1,0 +1,41 @@
+// Import Bootstrap
+@use "../node_modules/bootstrap/scss/bootstrap";
+
+// Hero
+.hero {
+  padding: 100px 25px;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(201, 161, 249, 0.8),
+    rgb(95, 51, 171) 80%
+  );
+
+  .hero-logo {
+    width: 300px;
+  }
+}
+
+// Cards
+.custom-card-1 {
+  background: linear-gradient(
+    130deg,
+    rgba(79, 86, 201, 0.8),
+    rgba(209, 196, 250, 0.5)
+  );
+}
+
+.custom-card-2 {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(79, 86, 201, 0.6),
+    rgba(209, 196, 250, 0.5)
+  );
+}
+
+.custom-card-3 {
+  background: linear-gradient(
+    130deg,
+    rgba(209, 196, 250, 0.8),
+    rgba(79, 86, 201, 0.5)
+  );
+}

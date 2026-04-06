@@ -4,7 +4,9 @@
   "description": "bootstrap",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sass --watch --quiet-deps scss:css",
+    "build": "sass scss:css"
   },
   "author": "Victoria Fingal",
   "license": "MIT",
